@@ -1,0 +1,48 @@
+- Install CLI using official docs: https://docs.railway.app/develop/cli#installation or from below.
+-- For Linux: curl -fsSL https://railway.app/install.sh | sh
+-- For Windows: scoop bucket add railway https://github.com/railwayapp/scoop-railway; scoop install railway/railway
+-- For MacOS: brew install railwayapp/railway/railway
+
+- Login to Railway: railway login OR railway login --browserless
+
+- Create a new project: railway init
+
+- Then enter project name
+
+- On successful creation you will see something like this: https://railway.app/project/4132688e-6fu4-4697-b67d-89fa93h1ifb9
+
+- Here "4132688e-6fu4-4697-b67d-89fa93h1ifb9" is your project_id.
+
+- Connect to the project: railway link project_id (replace project_id with your project_id)
+
+- Now open browser and login to your railway account.
+
+- Click on your project name created in the previous step.
+
+- Then click on "add a service" > empty_service.
+
+- Then click on that newly created service > go to settings > generate new domain.
+
+- Add that newly generated domain into your config > BASE_URL
+-----------
+- First of all fork this repo: https://gitlab.com/Dawn-India/Z-Mirror as PRIVATE.
+
+- Go to upstream branch and upload your config, accounts and all other private stuffs.
+
+- Then generate private upstream for this branch(upstream). Read readme on hr_deploy branch to learn how to generate.
+
+- Now clone this repo: git clone https://gitlab.com/Dawn-India/Z-Mirror.git Z-Mirror/ && cd Z-Mirror
+
+- Switch to deploy branch: git checkout hr_deploy
+
+------------------------------
+----DELETE README.md FILE-----
+------------------------------
+
+- Now add your config(read readme in the main branch to learn how to create config) and all other private files here in this folder Z-Mirror
+
+- After adding your private files do: git add . -f
+
+- Then commit your changes using: git commit -m conf
+
+- Now deploy using: railway up
